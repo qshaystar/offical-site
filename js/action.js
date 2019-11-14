@@ -7,6 +7,7 @@ $(document).ready(function(){
 		// if($('#nav').length>0) {
 		// 	$('#nav').removeClass().addClass('.account');
 		// }
+		// 找找slide
 		
 		$('.account').fadeToggle();
 	});
