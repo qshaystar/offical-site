@@ -71,7 +71,12 @@ p {
 	width: 50%;
 }
 
-.col-2-5, .col-4, .col-5, .col-6, .col-7 {
+.col-2-5 {
+	width: 80%;
+	margin: 0 auto;
+}
+
+.col-3, .col-4, .col-5, .col-6, .col-7 {
 	width: 100%;
 }
 
@@ -95,6 +100,9 @@ p {
 	display: none;
 }
 
+.nav-bar {
+		display: inline;
+}
 
 .account, #nav {
 	display: none;
@@ -134,10 +142,6 @@ p {
 }
 
 
-.logo {
-	display: inline-block;
-}
-
 .nav-side {
 	float: right;
 	line-height: 31px;
@@ -151,6 +155,10 @@ p {
 
 .cart-content {
 	display: none;
+}
+
+.logo {
+	display: inline-block;
 }
 
 
@@ -228,6 +236,7 @@ p {
 }
 
 .desc {
+		margin-left: 1em;
 		margin-bottom: 2em;	
 		
 	}
@@ -241,6 +250,7 @@ p {
 	display: inline-block;
     text-transform: uppercase;
     font-weight: bold;
+
 
     &:hover {
     	text-decoration: underline;
@@ -277,8 +287,8 @@ p {
 
 .new-label {
 	position: absolute;
-	top: 18px;
-    left: 55px;
+	top: 25px;
+    left: 0px;
 	padding: .25rem;
 	font-size: .5rem;
     font-weight: bold; 
@@ -288,6 +298,10 @@ p {
     
 }
 
+.placeholder {
+	font-size: .5rem;
+	opacity: 0;
+}
 
 
 
@@ -330,7 +344,7 @@ p {
 	.tag {
 		display: inline-block;
 		padding: 0.2em .2em;
-		background-color: @heavy-gray-color;
+		background-color: @gray-color;
 	}
     .banner-title {
     	font-size: 1.5rem;
@@ -408,9 +422,9 @@ p {
 	}
 
 	.go-shop {
-		padding: 0 .25rem;
+		padding: .2em 0.3em;
 		color: white;
-	    background: black;
+	    background: #2e2d32;
     
 	}
 }
@@ -419,7 +433,7 @@ p {
 	color: #2c3e66;
 
 	.stars {
-		margin-top: 1.2rem;
+		margin-top: 1.3rem;
 	}
 
 	.discount {
@@ -465,7 +479,7 @@ p {
 }
 
 .floor-lamp-banner {
-	color: @heavy-gray-color;
+	color: @gray-color;
 	.tag {
 		color: #b7b7b7;
 	}
@@ -480,7 +494,7 @@ p {
 	position: absolute;
     top: 30px;
     left: 20px;
-	color: @heavy-gray-color;
+	color: @gray-color;
 
 	.banner-title {
 		font-size: 1rem;
@@ -496,9 +510,8 @@ p {
 
 .features {
 
-	.col-3 {
+	.feature-item {
 		position: relative;
-		width: 100%;
 		padding: 0 1.5em;
 	}
 
@@ -522,11 +535,15 @@ p {
 	
 	.product-text {
 		position: absolute;
-	    top: 25px;
+	    top: 30px;
 	    left: 25px;
 	    color: @gray-text;
 	    line-height: 0;
 	    letter-spacing: .1rem;
+
+	    a {
+	    	color: @gray-text;
+	    }
 
 	    .tag {
 	    	text-transform: capitalize;
@@ -535,15 +552,21 @@ p {
 
 	    .product-name {
 	    	color: @gray-color;
-	    	font-size: 1.25rem;
+	    	font-size: 1.3rem;
 	    	text-transform: uppercase;
+
+	    	span {
+	    		text-transform: lowercase;
+	    	}
 	    }
 
-	    .go-shop {
-	    	margin-top: 5.5em;
-	    	font-weight: normal;
-	    }
+	    
 	}
+
+	.go-shop {
+	    	margin-top: 5em;
+	    	font-weight: normal;
+	 }
 }
 
 
@@ -598,28 +621,22 @@ p {
 
 .best-seller {
 
-	img {
-		margin: 0 auto;
-		
-	}
+	
 
-	.col-2-5 {
+	.thumbnail {
+		display: inline-block;
 		position: relative;
 	}
 
 	.stars {
 		position: absolute;
 		top: 188px;
-    	left: 70px;
-	}
-
-	.desc {
-		padding-left: 5.5em;
+    	left: 10px;
 	}
 
 	.discount-label {
-		top: 39px;
-	    left: 55px;
+		top: 46px;
+	    left: 0;
 	    padding: 0.25rem;
 	    font-size: 0.5rem;
 	}
@@ -628,9 +645,13 @@ p {
 
 .marked-menu {
 	position: absolute;
-    top: 162px;
-    left: 55px;
+    left: 0;
+    right: 0;
+    bottom: 0;
     background: white;
+    text-align: center;
+    cursor: pointer;
+    z-index: 2;
     opacity: 0;
     transition: opacity .5s;
 	&:hover {
@@ -642,7 +663,13 @@ p {
 		float: left;
 		margin-left: -1px;
 		border: 1px solid #a7a7a7;
-		padding: 1.5em 1.3em;
+		padding: 1.25em 0;
+    	font-size: .85rem;
+    	width: 16.66666%;
+
+    	&:first-child {
+    		width: 68%;
+    	}
 
 	}
 
@@ -657,7 +684,7 @@ p {
 	padding-bottom: 4em;
 
 	.row {
-		margin: 0 -.5em;
+		margin: 0 -2em;
 	}
 
 	.subtitle {
@@ -672,7 +699,7 @@ p {
 	}
 
 	.brand-logo {
-		padding: .5em;
+		padding: .5em 2em;
 	}
 }
 
@@ -687,6 +714,7 @@ p {
 .pros {
 	display: flex;
 	width: 100%;
+	color: #353535;
 
 	i {
 		font-size: 2rem;
@@ -694,8 +722,7 @@ p {
 	}
 
 	.desc {
-		margin-left: 1em;
-
+	
 		h5 {
 			font-size: 1rem;
 		    text-transform: uppercase;
@@ -715,6 +742,17 @@ hr {
 
 
 .info {
+
+	.logo {
+
+		img {
+			width: auto;
+		}
+	}
+}
+
+
+.info-box {
 	
 	width: 100%;
 	color: @gray-text;
@@ -748,7 +786,7 @@ hr {
 	font-size: 1rem;
 	li {
 		float: left;
-		padding-left: 1em;
+		padding-right: 1em;
 	}
 	
 }
@@ -761,6 +799,12 @@ hr {
 
 .copyright {
 	line-height: 3;
+	color: @gray-text; 
+
+	span {
+		font-weight: bold;
+		color: black;
+	}
 }
 
 
@@ -784,15 +828,29 @@ hr {
 	}
 
 
-	.col-6 {
+	.col-3, .col-4, .col-6{
 		width: 50%;
 	}
 
+	.col-2 {
+		width: 33.33333%
+	}
+
+	.col-2-5 {
+		float: left;
+		margin: 0;
+		width: 33.33333%;
+
+		img {
+			width: 100%;
+		}
+	}
 
 // header
 	.account, #nav {
 		width: 720px;
 	}
+
 
 // content
 
@@ -800,12 +858,12 @@ hr {
 		font-size: .2rem;
 	}
 
-	.tag {
-		font-size: .5rem;
+	.banners {
+		padding: 0 .25em;
 	}
 
-	.price {
-		font-size: 1.25rem;
+	.tag {
+		font-size: .5rem;
 	}
 
 	.discount {
@@ -816,9 +874,11 @@ hr {
 		font-size: .5rem;
 	}
 
-	.banners {
-		padding: 0 .25em;
+	.stars {
+			font-size: .5rem;
 	}
+
+	
 
 
 
@@ -840,16 +900,39 @@ hr {
 		}
 
 		.col-5 {
-		width: 36%
-	}
+			width: 35.6%;
+
+			.banners {
+				&:nth-child(2) {
+					margin-top: .65em;
+				}
+			}
+		
+		}
 
 	.col-7 {
-		width: 63.25%
+		width: 64.3%
 		}
+
+	.full-padding {
+		padding-top: .5em;
+		}
+
+
+	.price {
+		font-size: 1.25rem;
+		}	
 	}
 
 	.collection-benner {
-		top: 140px;
+		top: 145px;
+		
+		.banner-title {
+			font-size: 1.35rem;
+		}
+		.tag {
+			padding: .2em .5em;
+		}
 	}
 
 	.sofa-banner {
@@ -872,22 +955,137 @@ hr {
 		right: 13px;
 
 		.banner-title {
-			font-size: 1rem;
+			font-size: .9rem;
 		}
 
-		.stars {
-			font-size: .5rem;
-		}
+		
 	}
 
 	.col-3 {
 		.banners {
 			margin: 0;
-
-			&:nth-child(2) {
-				margin-top: 2.05em;
-			}
 		}
+	}
+
+
+
+
+	.stool-banner {
+		top: 35px;
+   	 	left: 30px;
+
+   	 	.banner-title {
+   	 		font-size: 1.35rem;
+   	 	}
+	}
+
+	.dining-chair-banner, .floor-lamp-banner {
+
+		.banner-title {
+			font-size: 1rem;
+		}
+	}
+	
+	.dining-chair-banner {
+
+		.go-shop {
+			margin-top: 4em;
+		}
+	}
+
+	.floor-lamp-banner {
+
+		.go-shop {
+			margin-top: 9em;
+		}
+	}
+
+	.features {
+
+		.feature:nth-child(2) {
+		margin: 0 -5em;
+		}
+
+		.product-text {
+			top: 40px;
+			left: 30px;
+
+		}
+
+		.go-shop {
+			margin-top: 6em;
+		}
+
+	}
+
+
+	.feature {
+		
+
+		.feature-item {
+			padding: 0 5em;
+		}
+
+
+	
+		.discount-label {
+			left: 80px;
+		}
+	}
+
+	
+
+	.feature-menu {
+		padding: 3em 0;
+		font-size: .85rem;
+		
+	}
+	
+
+	// footer
+
+	.guarantee {
+		margin: 0 -2.5em;
+	}
+
+	.pros {
+		padding: 0 2.5em;
+	}
+
+	.info {
+
+		.col-3 {
+			width: 100%;
+		}
+
+		.address, a, i {
+			font-size: .5rem;
+		}
+
+		
+
+		
+	}
+
+	.subscribe {
+		display: inline-block;
+		float: left;
+		width: 50%;
+		font-size: .5rem;
+	}
+
+	.social-media i {
+		font-size: 1.25rem;
+	}
+	
+
+	.copyright {
+		float: left;
+		font-size: .5rem;
+	}
+
+	.payment-methods {
+		float: right;
 	}
 	
 	
@@ -902,22 +1100,40 @@ hr {
 		font-size: 20px;
 	}
 	
+	
 	.container {
 		max-width: 1200px;
 	}
 
-
-	.col-3 {
-		width: 24.2%
+	.col-2 {
+		width: 16.66666%;
 	}
 
+	.col-2-5 {
+		width: 20%;
+	}
+
+	.col-3 {
+		width: 25%
+	}
+
+	.col-4 {
+		width: 33.33333%;
+	}
+
+	
 
 	#header {
 		padding: 0;
 
 		>div:nth-child(2) {
-			padding: 30px 0;
+			padding: 40px 0;
 		}
+
+		.logo {
+			float: left;
+		}
+
 
 	}
 
@@ -928,7 +1144,7 @@ hr {
 				float: left;
 				a {
 					display: inline-block;
-					padding: 10px;
+					padding: 10px 20px;
 					color: @light-gray-color;
 					font-size: .5rem;
 				 &:hover {
@@ -963,17 +1179,19 @@ hr {
 		display: none;
 	}
 
-	.logo {
-		float: left;
+	
+	.nav-bar {
+		float: right;
 	}
 
 	#nav {
 		float: left;
 		display: inline-block;
 	    position: static;
-	    margin-top: 11px;
 	    padding: 0;
 	    width: auto;
+	    font-size: 14px;
+	    line-height: 29px;
 	    text-transform: uppercase;
 	    li {
 	    	float: left;
@@ -982,40 +1200,368 @@ hr {
 
 	    a {
 	    	padding: 0;
-		    padding-left: 30px;
+		    padding-left: 50px;
 		    color: #313131;
 	    }
 	}
 
 	.nav-side {
 		float: none;
+		display: flex;
+		padding-left: 20px;
+
+		a {
+			padding-left: 30px;
+		}
+
 		.cart-content {
 			float: right;
 			display: inline;
 		    font-size: 0.5rem;
-		    line-height: 1;
+		    line-height: 15px;
+
+		    div {
+		    	font-weight: bold;
+		    }
 		}
 	}
 
 
 	// content
 
+
+	.tag {
+		line-height: 2;
+		font-size: .85rem;
+		font-weight: 500;
+		letter-spacing: 3px;
+	}
+
+	.discount {
+		font-size: 1rem;
+	}
+
+	.go-shop {
+		font-size: .9rem;
+	}
+
+	.detail-btn {
+		margin-left: 1rem;
+		width: 1.5rem;
+		height: 1.5rem;
+	}
+
+	.desc {
+		margin-bottom: 0;
+	}
+
+	hr {
+		margin: 3em 0;
+	}
+
+
+
 	.header {
-		.col-3 {
+
+		.row {
+		margin: 0 -.35em;
+		}
+
+		.banners {
+			padding: 0 .35em;
+		}
+
+		.col-5 {
+			.banners:nth-child(2) {
+				margin-top: .9em;
+			}
+		}
+
+		.price {
+			font-size: 1.8rem;
+		}
+
+		p {
+			line-height: 20px;
+		}
+	}
+
+
+	.collection-benner {		
+		top: 250px;
+		left: 60px;
+		
+
+		.banner-title {
+			font-size: 2.5rem;
+			line-height: 60px;
+		}
+
+		
+	}
+
+	.sofa-banner {
+		top: 30px;
+		left: 30px;
+		
+		.banner-title {
+			font-size: 1.5rem;
+		}
+
+		.price-label {
+			margin-top: 8.5em;
+    		margin-left: 6.5rem;
+			padding-top: 37px;
+			width: 6.5em;
+			height: 6.5em;
+		}
+
+		.go-shop {
+			margin-top: 6em;
+		}
+	}
+
+	.bean-banner, .blue-chair-banner {
+		top: 35px;
+	    left: 30px;
+	    right: 30px;
+
+		.banner-title {
+			font-size: 1.15rem;
+		    line-height: 1.5;
+		    letter-spacing: 2px;
+		}
+
+	}
+
+	.bean-banner {
+
+		.price {
+			margin-top: 3em;
+    		margin-bottom: 0.5em;
+		}
+
+		.go-shop {
+			padding: 0.5em 0.8em;
+		}
+		
+	}
+
+	.blue-chair-banner {
+
+		.stars {
+			margin-top: 4.2rem;
+		}
+
+		.detail-btn {
+			margin-left: 1rem;
+		}
+	}
+	
+	.dining-chair-banner, .floor-lamp-banner {
+		top: 35px;
+   	 	right: 40px;
+
+		.banner-title {
+			font-size: 1.5rem;
+    		letter-spacing: 3px;
+		}
+
+		.tag {
+			letter-spacing: 5px;
+		}
+	}
+
+	.dining-chair-banner {
+		.go-shop {
+			margin-top: 5em;
+		}
+	}
+
+	.floor-lamp-banner {
+		.go-shop {
+			margin-top: 12em;
+		}
+	}
+
+	.stool-banner {
+		top: 72px;
+    	left: 56px;
+
+		.banner-title {
+			font-size: 2.5rem;
+		}
+	}
+
+
+	.features {
+
+		.row {
+			margin: 0;
+		}
+
+		.feature {
 
 			&:nth-child(2) {
-				width: 23.9%;
+				margin: 0 -1em;
 			}
-			
 
-			&:nth-child(3) {
-				width: 26.1%;
+			.feature-item {
+			padding: 0 1em;
 			}
+
+			.discount-label {
+				left: 22px;
+			}
+		}
+
+		.product-text {
+			top: 30px;
+			left: 40px;
+		}
+
+		.go-shop {
+			margin-top: 4em;
 		}
 	}
 
 	
-	
+
+	.feature-menu {
+		padding: 2em 0 1em 0;
+		font-size: 1rem;
+
+		ul:first-child {
+			line-height: 35px;
+		}
+	}
+
+	.control-bar {
+		display: block;   
+	    border-radius: 35px;
+	    padding: .35em;
+	    background: #eee;
+
+	    li {
+	    	    
+		    border-radius: 50%;
+		    height: 1.5rem;
+		    width: 1.5rem;
+		    text-align: center;
+		    line-height: 1.25;
+		    background: white;
+
+		    &:last-child {
+		    	margin-left: .2em;
+		    }
+
+		    a {
+		    	color: #eee;
+		    }
+	    }
+	}
+
+
+	.best-seller {
+
+		.row {
+			margin: 0 -14px;
+		}
+
+		.col-2-5 {
+			text-align: center;
+		}
+
+		.desc {
+			margin-bottom: 0;
+			text-align: left;
+		}
+	}
+
+
+// footer
+
+	.pros {
+
+		padding: 0;
+
+		i {
+			font-size: 2.5rem;
+		}
+
+		.desc {
+			line-height: 1.5;
+
+			h5 {
+				font-size: 1rem;
+			}
+
+			p {
+				font-size: .8rem;
+			}
+			
+		}
+	}
+
+	.guarantee {
+		margin: 0;
+	}
+
+	.info {
+
+		padding-bottom: 3em;
+
+		.col-3 {
+			width: 25%;
+		}
+
+	}
+
+	.info-box {
+
+		&:last-child {
+			text-align: right;
+		}
+
+		h6 {
+			margin-bottom: 2em;
+			line-height: 0;
+		}
+
+		li {
+			line-height: 1.75;
+		}
+	}
+
+	.search-bar {
+
+		padding-top: 1em;
+
+		.button {
+			padding: 1.2em;
+		}
+
+		input {
+			padding: 1.2em 1.5em;
+		}
+	}
+
+	.subscribe {
+		float: none;
+    	width: auto;
+	}
+
+	.social-media {
+		float: right;
+		padding-top: 5em;
+
+		li {
+			padding: 0;
+			padding-left: 1em;
+		}
+	}
+
+
 
 }
 

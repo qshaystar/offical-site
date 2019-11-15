@@ -52,55 +52,57 @@
 				<img src="images/logo.png" alt="schon">
 			</div>
 
+			<div class="nav-bar clearfix">
+				<ul id="nav" class="clearfix">
+					<li>
+						<a href="#">Home</a>
+					</li>
+					<li class="dropdown">
+						<a href="#" >Products </a>
+					</li>
+					<li>
+						<a href="#">About</a>
+					</li>
+					<li>
+						<a href="#">Blog</a>
+					</li>
+					<li>
+						<a href="#">Contact</a>
+					</li>
+							
+				</ul>
 
-			<ul id="nav" class="clearfix">
-				<li>
-					<a href="#">Home</a>
-				</li>
-				<li class="dropdown">
-					<a href="#" >Products </a>
-				</li>
-				<li>
-					<a href="#">About</a>
-				</li>
-				<li>
-					<a href="#">Blog</a>
-				</li>
-				<li>
-					<a href="#">Contact</a>
-				</li>
+				<ul class="nav-side clearfix">
+
+
+					<li class="menu-toggle">
+						<a href="#">
+							<i class="icon-menu"></i>
+						</a>
+					</li>
+
+
+					<li><a href="#"><i class="icon-search"></i></a></li>
+					<li id="cart clearfix">
+						<a href="#">
+							<i class="icon-shopping-bag"></i>
+						</a>
+						<div class="cart-content">
+							<div>Shopping Cart</div>
+							<span>3 Items</span>
+							<span>$74.00</span>
+						</div>
 						
-			</ul>
+					</li>
 
-			<ul class="nav-side clearfix">
-
-
-				<li class="menu-toggle">
-					<a href="#">
-						<i class="icon-menu"></i>
-					</a>
-				</li>
-
-
-				<li><a href="#"><i class="icon-search"></i></a></li>
-				<li id="cart clearfix">
-					<a href="#">
-						<i class="icon-shopping-bag"></i>
-					</a>
-					<div class="cart-content">
-						<div>Shopping Cart</div>
-						<span>3 Items</span>
-						<span>$74.00</span>
-					</div>
-					
-				</li>
-
-				<li class="user-toggle">
-					<a href="#">
-						<i class="icon-user-o"></i>
-					</a>
-				</li>	
-			</ul>
+					<li class="user-toggle">
+						<a href="#">
+							<i class="icon-user-o"></i>
+						</a>
+					</li>	
+				</ul>
+			</div>
+			
 		</div>
 
 		
@@ -183,7 +185,7 @@
 					</div>
 				</div>
 
-				<div class="row">
+				<div class="row full-padding">
 					<div class="col-5">
 						<div class="banners">
 							<img src="images/chair-green-bg.png" alt="dining chair">
@@ -213,7 +215,7 @@
 						<div class="stool-banner banner-text">
 							<div class="tag">furniture design ideas</div>
 							<div class="banner-title">
-								<h2>Upholstered Fabric</h2>
+								<h2>Upholstered fabric</h2>
 								<h2>Counter stool</h2>
 							</div>
 							<p>Consecterur adipisicing elit. Veatae accusamus, optio, repellendus inventore</p>
@@ -230,7 +232,7 @@
 			<div class="container">
 				<div class="feature-menu clearfix">
 					<ul class="clearfix">
-						<li class="active boundary"><a href="#">featured</a></li>
+						<li class="active boundary"><a href="">featured</a></li>
 						<li class="boundary"><a href="#">latest</a></li>
 						<li><a href="#">best seller</a></li>
 
@@ -243,7 +245,7 @@
 				</div>
 				
 				<div class="row feature">
-					<div class="col-3">
+					<div class="col-3 feature-item">
 						<a href="#">
 							<img src="images/desk.png" alt="product">
 						</a>
@@ -260,18 +262,19 @@
 						</div>
 						
 					</div>
-					<div class="col-3">
+					<div class="col-3 feature-item">
 						<a href="#">
 							<img src="images/desk.png" alt="product">
 						</a>
 
 						<div class="desc">
+							<div class="placeholder">h</div>
 							<h4 class="product-name">Marvelous Modern 3 Seate</h4>
 							<div class="price">&euro; 599,00</div>
 						</div>
 						
 					</div>
-					<div class="col-3">
+					<div class="col-3 feature-item">
 						<a href="#">
 							<img src="images/desk.png" alt="product">
 						</a>
@@ -290,11 +293,12 @@
 						</div>
 						
 					</div>
-					<div class="col-3">
+					<div class="col-3 feature-item">
 						<a href="#">
 							<img src="images/desk.png" alt="product">
 						</a>
 						<div class="desc">
+							<div class="placeholder">h</div>
 							<h4 class="product-name">Bombi Chair</h4>
 							<div class="price">&euro; 399,00</div>
 						</div>
@@ -322,11 +326,11 @@
 						</div>
 					</div>
 					<div class="col-4">
-						<img src="images/clocks.png" alt="clocks">
+						<img src="images/rocking-lamp.png" alt="clocks">
 
 						<div class="product-text">
-							<div class="tag">Wall Decor</div>
-							<h3 class="product-name">Clocks</h3>	
+							<div class="tag">Floor Lamps</div>
+							<h3 class="product-name">rocking lamp</h3>	
 							<a href="#" class="go-shop">View <span class="detail-btn">&gt;</span></a>							
 						</div>
 					</div>
@@ -339,18 +343,13 @@
 				<h4 class="title">best seller</h4>
 				<div class="row">
 					<div class="col-2-5">
-						<a href="#">
+
+						<div class="thumbnail">
+							<a href="#">
 							<img src="images/lounge.png" alt="lounge">
-						</a>
-						
-						<span class="new-label">new</span>
-						<ul class="stars clearfix">
-							<li><i class="icon-star"></i></li>
-							<li><i class="icon-star"></i></li>
-							<li><i class="icon-star"></i></li>
-							<li><i class="icon-star-empty"></i></li>
-						</ul>
-						<ul class="marked-menu clearfix">
+							</a>
+
+							<ul class="marked-menu clearfix">
 							<li>
 								<a href="#">
 									<i class="icon-shopping-bag"></i>Add to Cart
@@ -366,25 +365,31 @@
 									<i class="icon-exchange"></i>
 								</a>
 							</li>
-						</ul>
-						<div class="desc">
-							<h4 class="product-name">Puff Chair</h4>
-							<div class="price">&euro; 287,00</div>
+							</ul>
+
+							<span class="new-label">new</span>
+							<ul class="stars clearfix">
+								<li><i class="icon-star"></i></li>
+								<li><i class="icon-star"></i></li>
+								<li><i class="icon-star"></i></li>
+								<li><i class="icon-star-empty"></i></li>
+							</ul>
 						</div>
 						
+						
+						<div class="desc">
+							<h4 class="product-name">Puff Chair</h4>
+							<div class="price">&euro; 287,00</div>
+						</div>
+						
 					</div>
 					<div class="col-2-5">
-						<a href="#">
+						<div class="thumbnail">
+							<a href="#">
 							<img src="images/lounge.png" alt="lounge">
-						</a>
-						<span class="new-label">new</span>
-						<ul class="stars clearfix">
-							<li><i class="icon-star"></i></li>
-							<li><i class="icon-star"></i></li>
-							<li><i class="icon-star"></i></li>
-							<li><i class="icon-star-empty"></i></li>
-						</ul>
-						<ul class="marked-menu clearfix">
+							</a>
+
+							<ul class="marked-menu clearfix">
 							<li>
 								<a href="#">
 									<i class="icon-shopping-bag"></i>Add to Cart
@@ -400,24 +405,23 @@
 									<i class="icon-exchange"></i>
 								</a>
 							</li>
-						</ul>
+							</ul>
+						</div>
+						
+						
+					
 						<div class="desc">
 							<h4 class="product-name">Puff Chair</h4>
 							<div class="price">&euro; 287,00</div>
 						</div>
 					</div>
 					<div class="col-2-5">
-						<a href="#">
+						<div class="thumbnail">
+							<a href="#">
 							<img src="images/lounge.png" alt="lounge">
-						</a>
-						<div class="new-label">new</div>
-						<ul class="stars clearfix">
-							<li><i class="icon-star"></i></li>
-							<li><i class="icon-star"></i></li>
-							<li><i class="icon-star"></i></li>
-							<li><i class="icon-star-empty"></i></li>
-						</ul>
-						<ul class="marked-menu clearfix">
+							</a>
+
+							<ul class="marked-menu clearfix">
 							<li>
 								<a href="#">
 									<i class="icon-shopping-bag"></i>Add to Cart
@@ -433,25 +437,22 @@
 									<i class="icon-exchange"></i>
 								</a>
 							</li>
-						</ul>
+							</ul>
+						</div>
+						
+						
 						<div class="desc">
 							<h4 class="product-name">Puff Chair</h4>
 							<div class="price">&euro; 287,00</div>
 						</div>
 					</div>
 					<div class="col-2-5">
-						<a href="#">
+						<div class="thumbnail">
+							<a href="#">
 							<img src="images/lounge.png" alt="lounge">
-						</a>
-						<div class="discount-label">15% Off</div>
-						<span class="new-label">new</span>
-						<ul class="stars clearfix">
-							<li><i class="icon-star"></i></li>
-							<li><i class="icon-star"></i></li>
-							<li><i class="icon-star"></i></li>
-							<li><i class="icon-star-empty"></i></li>
-						</ul>
-						<ul class="marked-menu clearfix">
+							</a>
+
+							<ul class="marked-menu clearfix">
 							<li>
 								<a href="#">
 									<i class="icon-shopping-bag"></i>Add to Cart
@@ -467,24 +468,28 @@
 									<i class="icon-exchange"></i>
 								</a>
 							</li>
-						</ul>
+							</ul>
+
+							<div class="discount-label">15% Off</div>
+							<span class="new-label">new</span>
+
+							
+						</div>
+						
+						
+						
 						<div class="desc">
 							<h4 class="product-name">Puff Chair</h4>
 							<div class="price">&euro; 287,00</div>
 						</div>
 					</div>
 					<div class="col-2-5">
-						<a href="#">
+						<div class="thumbnail">
+							<a href="#">
 							<img src="images/lounge.png" alt="lounge">
-						</a>
-						<div class="new-label">new</div>
-						<ul class="stars clearfix">
-							<li><i class="icon-star"></i></li>
-							<li><i class="icon-star"></i></li>
-							<li><i class="icon-star"></i></li>
-							<li><i class="icon-star-empty"></i></li>
-						</ul>
-						<ul class="marked-menu clearfix">
+							</a>
+
+							<ul class="marked-menu clearfix">
 							<li>
 								<a href="#">
 									<i class="icon-shopping-bag"></i>Add to Cart
@@ -500,7 +505,11 @@
 									<i class="icon-exchange"></i>
 								</a>
 							</li>
-						</ul>
+							</ul>
+
+						</div>
+						
+						
 						<div class="desc">
 							<h4 class="product-name">Puff Chair</h4>
 							<div class="price">&euro; 287,00</div>
@@ -588,8 +597,8 @@
 
 				<hr>
 
-				<div class="row">
-					<div class="col-3 info">
+				<div class="row info">
+					<div class="col-3 info-box">
 						<div class="logo">
 							<img src="images/logo-gray.png" alt="schon">
 						</div>
@@ -617,7 +626,7 @@
 						</div>
 					</div>
 
-					<div class="col-2 info">
+					<div class="col-2 info-box">
 						<h6>Categories</h6>
 						<ul>
 							<li><a href="#">Chairs</a></li>
@@ -629,18 +638,18 @@
 						</ul>
 						
 					</div>
-					<div class="col-2 info">
+					<div class="col-2 info-box">
 						<h6>Categories</h6>
 						<ul>
 							<li><a href="#">Chairs</a></li>
 							<li><a href="#">Chairs</a></li>
-							<li><a href="#">Chairs</a></li>
+							<li><a href="#">Terms&Conditions</a></li>
 							<li><a href="#">Chairs</a></li>
 							<li><a href="#">Chairs</a></li>
 							<li><a href="#">Chairs</a></li>
 						</ul>
 					</div>
-					<div class="col-2 info">
+					<div class="col-2 info-box">
 						<h6>Categories</h6>
 						<ul>
 							<li><a href="#">Chairs</a></li>
@@ -652,16 +661,20 @@
 						</ul>
 					</div>
 
-					<div class="col-3 info">
-						<h6>Sing Up Neswletter</h6>
-						<div class="search-bar">
-							<input type="text" placeholder="Your e-mail">
-							<button class="button">Subscribe</button>
+					<div class="col-3 info-box clearfix">
+
+						<div class="subscribe">
+							<h6>Sing Up Neswletter</h6>
+							<div class="search-bar">
+								<input type="text" placeholder="Your e-mail">
+								<button class="button">Subscribe</button>
+							</div>
 						</div>
+						
 
-						<div class="social-media clearfix">
+						<div class="social-media">
 							<h6>Follow Us</h6>
-							<ul>
+							<ul class="clearfix">
 								<li><a href="#"><i class="icon-twitter"></i></a></li>
 								<li><a href="#"><i class="icon-facebook"></i></a></li>
 								<li><a href="#"><i class="icon-gplus"></i></a></li>
@@ -675,9 +688,9 @@
 			</div>
 
 			<div class="bottom">
-				<div class="container">
+				<div class="container clearfix">
 					<div class="copyright">
-						&copy; <span>schon</span>-All rights Received.
+						&copy; <span>schön.</span>-All rights Received.
 					</div>
 					<div class="payment-methods">
 						<img src="images/payment-methods-logos.png" alt="payment-method">
