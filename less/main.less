@@ -4,6 +4,7 @@
 @light-gray-color: #6b6b6b;
 @gray-text: #757575;
 
+@import "about.less";
 
 
 
@@ -94,6 +95,32 @@ p {
 
 #header {
 	padding: 1rem 0;
+
+}
+
+.wide-header {
+	position: relative;
+	margin: 0 1em;
+
+	#nav, .account {
+		left: 0;
+		right: 0;
+		width: auto;
+	}
+}
+
+#breadcrumbs {
+	display: none;
+
+	.boundary:after {
+		content: ">";
+	}
+
+	a {
+		&:hover {
+			text-decoration: underline;
+		}
+	}
 }
 
 .contact-info {
@@ -152,6 +179,27 @@ p {
 }
 
 
+#cart {
+	position: relative;
+
+	.item {
+		
+	    position: absolute;
+	    top: 16px;
+	    right: 0;
+	    border: 1px solid white;
+	    border-radius: 50%;
+	    width: 1rem;
+	    height: 1rem;		    
+	    font-size: .5rem;   
+	    line-height: 1rem;
+	    text-align: center;
+	   	background: black;
+	    color: white;
+    
+	}
+}
+
 
 .cart-content {
 	display: none;
@@ -162,8 +210,22 @@ p {
 }
 
 
+
 // content
 
+
+.header {
+	&.gray-bg {
+		padding: 3em 0;
+	}
+
+	.title {
+		text-align: center;
+	    font-size: 2.25rem;
+	    text-transform: uppercase;
+	    color: @heavy-gray-color;
+	}
+}
 
 .gray-bg {
 	background-color: #f6f6f6;
@@ -185,7 +247,8 @@ p {
 }
 
 .search-bar {
-
+	position: relative;
+	
 	input {
 		padding: 1em;
 		border-top-left-radius: 40px;
@@ -216,7 +279,31 @@ p {
 	:-ms-input-placeholder {
 		font-weight: bold;
 	}
+
+	&.bordered-ver {
+		input {
+			border: 1px solid @gray-color;
+		    border-radius: 40px;
+		    width: 80%;
+		}
+
+		.button {
+			position: absolute;
+			background: transparent;
+		    border: none;
+		    color: @gray-color;
+		    left: 71%;
+		}
+
+	}
 }
+
+h4.title {
+	margin-bottom: 1.25em;
+	font-size: 1.25rem;
+	text-transform: uppercase;
+	color: @heavy-gray-color;
+	}
 
 .tag {
 	padding: 1px;
@@ -249,13 +336,7 @@ p {
 .go-shop {
 	display: inline-block;
     text-transform: uppercase;
-    font-weight: bold;
-
-
-    &:hover {
-    	text-decoration: underline;
-    }
-    
+    font-weight: bold;    
 }
 
 
@@ -353,6 +434,10 @@ p {
 
     .price {
     	line-height: 2;
+    }
+
+    h2:first-child {
+    	font-family: Tahoma;
     }
 }
 
@@ -530,7 +615,8 @@ p {
 	}
 
 	.product-name {
-		font-size: 1rem;
+		font-size: .92rem;
+		line-height: 3;
 	}
 	
 	.product-text {
@@ -560,13 +646,15 @@ p {
 	    	}
 	    }
 
-	    
-	}
 
+	    
+	}	
+	
 	.go-shop {
-	    	margin-top: 5em;
+	    	margin-top: 4em;
 	    	font-weight: normal;
 	 }
+
 }
 
 
@@ -586,6 +674,7 @@ p {
 
 	a {
 		color: @gray-text;
+		
 	}
 
 	.active a {
@@ -609,23 +698,24 @@ p {
 
 .best-seller, .brands {
 	padding-top: 4em;
-
-	.title {
-	margin-bottom: 1.25em;
-	font-size: 1.25rem;
-	text-transform: uppercase;
-	color: @heavy-gray-color;
-	}
     
 }
 
 .best-seller {
 
-	
+	.col-2-5 {
+		text-align:center;
+	}
 
 	.thumbnail {
 		display: inline-block;
 		position: relative;
+		transition: box-shadow .3s;
+	}
+
+	.desc {
+		margin-left: 2.5em;
+		text-align: left;
 	}
 
 	.stars {
@@ -666,6 +756,10 @@ p {
 		padding: 1.25em 0;
     	font-size: .85rem;
     	width: 16.66666%;
+		
+		&:hover {
+			background-color: #fbfbfb;
+		}
 
     	&:first-child {
     		width: 68%;
@@ -675,6 +769,7 @@ p {
 
 	a {
 		color: @light-gray-color;
+
 	}
 }
 
@@ -772,7 +867,7 @@ hr {
 	}
 
 	p {
-		margin: 1.5em 0;
+		margin: 2em 0;
 	}
 }
 
@@ -849,6 +944,18 @@ hr {
 // header
 	.account, #nav {
 		width: 720px;
+	}
+
+	#breadcrumbs {
+		display: flex;
+		justify-content: center;
+		font-size: .5rem;
+		line-height: 3;
+		color: @gray-text;
+
+		a {
+			color: @gray-text;
+		}
 	}
 
 
@@ -1012,10 +1119,6 @@ hr {
 
 		}
 
-		.go-shop {
-			margin-top: 6em;
-		}
-
 	}
 
 
@@ -1031,6 +1134,10 @@ hr {
 		.discount-label {
 			left: 80px;
 		}
+
+		.thumbnail {
+			transition: box-shadow .3s;
+		}
 	}
 
 	
@@ -1039,6 +1146,13 @@ hr {
 		padding: 3em 0;
 		font-size: .85rem;
 		
+	}
+
+	.best-seller {
+
+		.row {
+			margin: 0 -18px;
+		}
 	}
 	
 
@@ -1073,6 +1187,7 @@ hr {
 		width: 50%;
 		font-size: .5rem;
 	}
+
 
 	.social-media i {
 		font-size: 1.25rem;
@@ -1137,6 +1252,20 @@ hr {
 
 	}
 
+	.wide-header {
+		margin: 0 2em;
+		padding: 40px 0;
+
+		.nav-side {
+			padding-left: 50px;
+
+			a {
+				padding-left: 12px;
+			}
+		}
+	}
+
+
 	.header-top {
 		background-color: @dark-bg-color;
 
@@ -1147,6 +1276,7 @@ hr {
 					padding: 10px 20px;
 					color: @light-gray-color;
 					font-size: .5rem;
+					transition: background-color .5s;
 				 &:hover {
 				 	background-color: #3f3e43;
 				 }
@@ -1182,6 +1312,7 @@ hr {
 	
 	.nav-bar {
 		float: right;
+
 	}
 
 	#nav {
@@ -1202,6 +1333,12 @@ hr {
 	    	padding: 0;
 		    padding-left: 50px;
 		    color: #313131;
+		    transition: color .5s;
+
+		    &:hover {
+		    	color: #313131*3;
+		    }
+
 	    }
 	}
 
@@ -1212,6 +1349,11 @@ hr {
 
 		a {
 			padding-left: 30px;
+			transition: color .5s;
+
+			&:hover {
+		    	color: #313131*3;
+		    }
 		}
 
 		.cart-content {
@@ -1243,6 +1385,11 @@ hr {
 
 	.go-shop {
 		font-size: .9rem;
+		transition: font-size .2s ;
+
+	    &:hover {
+	    	text-decoration: underline;
+	    }
 	}
 
 	.detail-btn {
@@ -1254,6 +1401,10 @@ hr {
 	.desc {
 		margin-bottom: 0;
 	}
+
+	.thumbnail:hover {
+			box-shadow: 4px 4px 12px -2px rgba(20%,20%,40%,0.5);
+		}
 
 	hr {
 		margin: 3em 0;
@@ -1406,12 +1557,16 @@ hr {
 				margin: 0 -1em;
 			}
 
+			&:nth-child(3) {
+				padding-top: 4em;
+			}
+
 			.feature-item {
 			padding: 0 1em;
 			}
 
 			.discount-label {
-				left: 22px;
+				left: 21px;
 			}
 		}
 
@@ -1423,6 +1578,7 @@ hr {
 		.go-shop {
 			margin-top: 4em;
 		}
+
 	}
 
 	
@@ -1433,6 +1589,14 @@ hr {
 
 		ul:first-child {
 			line-height: 35px;
+		}
+
+		a {
+			transition: color .5s;
+
+			&:hover {
+				color: @heavy-gray-color;
+			}
 		}
 	}
 
@@ -1464,15 +1628,9 @@ hr {
 
 	.best-seller {
 
-		.row {
-			margin: 0 -14px;
-		}
-
-		.col-2-5 {
-			text-align: center;
-		}
-
+		
 		.desc {
+			margin-left: 2em;
 			margin-bottom: 0;
 			text-align: left;
 		}
@@ -1531,6 +1689,15 @@ hr {
 		li {
 			line-height: 1.75;
 		}
+
+		a {
+			transition: color .3s;
+
+			&:hover  {
+				color: #757575*1.3;
+			}
+			
+		}
 	}
 
 	.search-bar {
@@ -1539,10 +1706,33 @@ hr {
 
 		.button {
 			padding: 1.2em;
+			transition: background-color .3s;
+	
+			&:hover {
+				background-color: @gray-color*1.2;
+			}
 		}
 
 		input {
 			padding: 1.2em 1.5em;
+
+		}
+
+		&.bordered-ver {
+			
+			.button {
+				left: 85%;
+				transition: left .5s;
+
+				&:hover {
+					background-color: transparent;
+					left: 88%;
+				}
+			}
+
+			input {
+				width: 100%;
+			}
 		}
 	}
 
@@ -1559,10 +1749,12 @@ hr {
 			padding: 0;
 			padding-left: 1em;
 		}
+
+
 	}
 
 
-
+ 
 }
 
 
