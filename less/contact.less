@@ -1,0 +1,260 @@
+@dark-bg-color: #282828;
+@gray-color: #535353;
+@heavy-gray-color: #282828;
+@light-gray-color: #6b6b6b;
+@gray-text: #757575;
+
+
+
+.img-bg	{
+	padding: 2.5em 0;
+	background-image: url(../images/contact-header.png);
+	background-size: cover;
+	background-position: 50%;
+	background-repeat: no-repeat;
+}
+
+.intro {
+
+
+
+	input, textarea {
+		width: 100%;
+	    border: 1px solid #ccc;
+	    margin: .25em 0;
+	    padding: 1em 1.5em;
+	    border-radius: 30px;
+
+
+	}
+
+	button {
+		border-radius: 30px;
+		padding: 1.35em 1.75em;
+		font-size: .8rem;
+		background-color: @heavy-gray-color;
+	    color: white;	   
+
+	}
+
+	
+}
+
+.contact-desc {
+
+	.phone, .mail {
+		margin-bottom: 2em;
+	}
+
+	a {
+		font-size: .8rem;
+		color: @gray-color;
+	}
+}
+
+
+.map {
+	position: relative;
+	margin: 4em 0;
+
+	.logo {
+		position: absolute;
+		top: 30%;
+    	left: 50%;
+	}
+}
+
+.simpel-ver {
+
+	.logo {
+		filter: brightness(.5);
+	}
+
+	.address {
+
+		display: flex;
+
+		span {
+			padding: 0;
+		}
+	}
+
+
+}
+
+
+.col-4.info-box {
+	margin: 2em 0;
+
+	.contact {
+		margin-top: 2em;
+	}
+}
+
+
+
+
+
+// tabel
+
+
+@media (min-width: 768px) {
+	
+	.intro {
+
+		.company {
+			margin: 0 -2em;
+		}
+
+		.col-6 {
+			padding: 0 2em;
+		}
+
+		input, textarea {
+
+			padding: .45em 1em;
+
+			
+		}
+
+		::placeholder  {
+		  		font-size: .8rem;
+		}
+
+		::-webkit-input-placeholder {
+				font-size: .8rem;
+		}
+
+		:-ms-input-placeholder {
+				font-size: .8rem;
+		}
+
+	}
+
+	.contact-desc {
+
+		.col-4 {
+			width: 100%;
+		}
+	}
+
+	.simpel-ver {
+
+		.col-2 {
+			width: 16.6666%;
+		}
+
+		.col-4 {
+			width: 25%;
+			margin-top: 1em;
+		}
+
+		h6 {
+			text-transform: uppercase;
+		}
+
+		.info-box {
+			&:last-child {
+			text-align: right;
+			}
+		}
+
+
+
+		.payment-methods, .copyright {
+			float: none;
+			position: relative;
+			left: 50%;
+
+		}
+
+		.payment-methods {
+			width: 28%;
+			transform: translateX(-25%);
+
+			img {
+				width: 100%;
+			}
+		}
+
+		.copyright {
+			transform: translateX(-7.25%);
+		}
+
+		
+	}
+
+}
+
+
+// desktop
+
+@media (min-width: 1140px) {
+
+	
+	.intro {
+
+		
+
+		.col-6 {
+			padding: 0 4.5em;
+		}
+
+		.col-4 {
+			padding: 0 .25em;
+			width: 33.3333%;
+		}
+
+		.contact-desc a {
+			transition: color .4s;
+
+			&:hover {
+				color: @gray-color*2;
+			}
+		}
+
+		
+		form {
+			padding-right: 4em;
+		}
+
+		button {
+			transition: background-color .4s;
+
+			&:hover {
+				background-color: @heavy-gray-color*2.5;
+			}
+			
+		}
+
+		
+
+	}
+
+
+
+	.simpel-ver {
+
+		.col-4 {
+			margin-top: 0;
+		}
+
+		.address {
+			justify-content: flex-end;
+		}
+
+		.payment-methods {
+			width: 17%;
+			transform: translateX(-44%);
+		}
+
+		.copyright {
+			transform: translateX(-7.5%);
+		}
+
+
+	}
+
+
+
+}

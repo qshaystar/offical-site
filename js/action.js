@@ -4,22 +4,22 @@ $(document).ready(function(){
 		e.preventDefault();
 		e.stopPropagation();
 
-		// if($('#nav').length>0) {
-		// 	$('#nav').removeClass().addClass('.account');
-		// }
-		// 找找slide
+		if($('#nav').length>0) {
+			$('#nav').slideUp().addClass('.account');
+		}
 		
-		$('.account').fadeToggle();
+		
+		$('.account').slideToggle("slow");
 	});
 
 	$('.menu-toggle').click(function(e) {
 		e.preventDefault();
 		e.stopPropagation();
 
-		// if($('.account').length>0) {
-		// 	$('.account').removeClass().addClass('#nav');
-		// }
+		if($('.account').length>0) {
+			$('.account').slideUp().addClass('#nav');
+		}
 		
-		$('#nav').fadeToggle();
+		$('#nav').slideToggle("slow");
 	});
 });
