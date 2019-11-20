@@ -171,12 +171,12 @@
 	.team-member {
 
 		.row {
-			margin: 0 -3em;
+			margin: 0 -20px;
 		}
 	}
 
 	.member {
-		padding: 0 3em;
+		padding: 0 20px;
 	}
 
 	.workspace {
@@ -234,8 +234,6 @@
 		.cover {
 
 			.social-media {
-				width: 100%;
-				left: 66%;
 
 				li {
 					width: 2.25em;
@@ -261,7 +259,12 @@
     		padding: 0 .8em;
 		}
 
+		.images-grid {
+			position: relative;
+		}
+
 		.img-group {
+			
 
 			&:first-child {
 				margin-bottom: .8em;
@@ -271,6 +274,32 @@
 					margin-right: .8em;
 				}
 			}
+		}
+
+		.control-bar {
+		    position: absolute;
+		    left: 0;
+		    right: 0;
+		    bottom: 0;
+		    top: 0;	    
+		    border-radius: 0;
+		    padding: 0;
+		    background: transparent;
+
+	    	a {
+				color: @gray-text;
+	    	}
+		}
+
+		.control-left {
+			position: absolute;
+		    left: -5%;
+		    top: 50%;
+		}
+		.control-right {
+			position: absolute;
+		    right: -5%;
+		    top: 50%;
 		}
 	}
 }

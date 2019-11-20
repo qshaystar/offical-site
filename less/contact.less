@@ -54,14 +54,9 @@
 
 
 .map {
-	position: relative;
+	
 	margin: 4em 0;
 
-	.logo {
-		position: absolute;
-		top: 30%;
-    	left: 50%;
-	}
 }
 
 .simpel-ver {
@@ -153,6 +148,10 @@
 			text-transform: uppercase;
 		}
 
+		.info {
+			text-align: left;
+		}
+
 		.info-box {
 			&:last-child {
 			text-align: right;
@@ -163,23 +162,18 @@
 
 		.payment-methods, .copyright {
 			float: none;
-			position: relative;
-			left: 50%;
-
+			text-align: center;
 		}
 
 		.payment-methods {
-			width: 28%;
-			transform: translateX(-25%);
 
 			img {
-				width: 100%;
+				display: inline-block;
 			}
+			
 		}
 
-		.copyright {
-			transform: translateX(-7.25%);
-		}
+		
 
 		
 	}
@@ -243,14 +237,6 @@
 			justify-content: flex-end;
 		}
 
-		.payment-methods {
-			width: 17%;
-			transform: translateX(-44%);
-		}
-
-		.copyright {
-			transform: translateX(-7.5%);
-		}
 
 
 	}

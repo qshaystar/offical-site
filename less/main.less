@@ -69,12 +69,13 @@ p {
 	max-width: 320px;
 	display: block;
 	margin: 0 auto;
+	padding: 0 15px;
 }
 
 
 
 .col-2 {
-	width: 50%;
+	width: 70%;
 }
 
 .col-2-5 {
@@ -238,10 +239,21 @@ p {
 
 .banners {
 	position: relative;
+	margin-top: 5px;
 }
 
 .banner-text {
 	z-index: 2;
+	position: absolute;
+    top: 10%;
+    right: 10%;
+    left: 10%;
+    bottom: 10%;
+}
+
+.long-ver {
+	top: 5%;
+	bottom: 5%;
 }
 
 .banner-title {
@@ -384,7 +396,7 @@ h4.title {
 }
 
 .placeholder {
-	font-size: .5rem;
+	font-size: 13px;
 	opacity: 0;
 }
 
@@ -396,83 +408,79 @@ h4.title {
 .header  {
 	img {
 		display: inline;
-	}
-
-	.col-3{
-
-		&:nth-child(2) {
-			width: 48%;
-			
-		}
-
-		&:nth-child(3) {
-			width: 52%;
-		}
-
-		.banners {
-			margin-left: 0.2em;
-
-			&:nth-child(2) {
-				margin-top: .65em;
-			}
-		}
+		object-fit: cover;
+		height: 100%
 	}
 	
 }
 
-.collection-benner {
-	position: absolute;
-    top: 110px;
-    left: 30px;
-    width: 60%;
+
+.collection-banner {
+	height: 300px;
+}
+
+.collection-text {
+    position: absolute;
+    bottom: 0;
+    width: 80%;
     color: white;
-	.tag {
+
+    .tag {
 		display: inline-block;
 		padding: 0.2em .2em;
 		background-color: @gray-color;
 	}
-    .banner-title {
+
+	.banner-title {
     	font-size: 1.5rem;
     	line-height: 1;
     }
 
-    .price {
+		.price {
     	line-height: 2;
-    }
-
-    h2:first-child {
-    	font-family: Tahoma;
     }
 }
 
 
-
 .sofa-banner {
-	position: absolute;
-    top: 10px;
-    left: 5px;
+	width: 100%;
+	height: 400px;
+}
+
+.sofa-text {
+	width: 100%;
     color: white;
+
+    .tag {
+    	text-align: center;
+    	font-size: 14px;
+    	line-height: 2.5;
+    }
+
     .banner-title {
-    	margin-top: 1rem;
-    	font-size: 1.12rem;
+    	
+    	font-size: 28px;
     }
 
     .price-label {
-	    border-radius: 50%;
-	    margin-top: 6em;
-   		margin-left: 5em;
+    	position: absolute;
+	    right: 0;
+	    bottom: 20%;
+	    border-radius: 50%;	    
 	    padding-top: 1.25rem;
-	    width: 5rem;
-	    height: 5rem;
+	    width: 5.5rem;
+	    height: 5.5rem;
 	    text-align: center;
 	    background: #62c5de;
+
 	    .price span {
 	    	font-size: .8rem;
 	    }
     }
 
     .go-shop {
-    	margin-top: 4em;
+    	position: absolute;
+    	bottom: 0;
     	color: white;   		
     	
     }
@@ -480,15 +488,17 @@ h4.title {
 
 
 .bean-banner, .blue-chair-banner {
-	position: absolute;
-	top: 10px;
-	left: 10px;
-	right: 10px;
-	bottom: 10px;
+	height: 250px;
+	width: 100%;
 
 	.banner-title {
+		font-size: 22px;
 		text-transform: uppercase;
 		letter-spacing: .05rem;
+	}
+
+	.price {
+		font-size: 22px;
 	}
 }
 
@@ -503,10 +513,15 @@ h4.title {
 		float: right;
 	}
 
-	.price {
+	.down {
+		position: absolute;
+	    right: 0;
+	    bottom: 0
+	}
+
+	.price {	
 		clear: both;
-		margin-top: 3rem;
-    	margin-bottom: .55rem;
+  		line-height: 2;
 		color: #991015;
 	}
 
@@ -522,17 +537,27 @@ h4.title {
 	color: #2c3e66;
 
 	.stars {
-		margin-top: 1.3rem;
+		line-height: 2;
+	}
+
+	.down {
+		position: absolute;
+		left: 0;
+		bottom: 0;
 	}
 
 	.discount {
 		color: #2c3e66;
 		opacity: .7;
+		font-size: 14px;
+	}
+
+	.price {
+		line-height: 1.5;
 	}
 
 	.go-shop  {
 		color: #2c3e66;
-		margin-top: .5rem;
 		
 	}
 
@@ -542,10 +567,6 @@ h4.title {
 }
 
 .dining-chair-banner, .floor-lamp-banner {
-	position: absolute;
-	top: 20px;
-	right: 20px;
-	text-align: right;
 
 	.banner-title {
 		font-size: 1.25rem;
@@ -554,21 +575,39 @@ h4.title {
 	}
 
 	.tag {
+		text-align: right;
 		text-transform: capitalize;
+	}
+
+	.top {
+		position: absolute;
+		right: 0;
+	}
+
+	.go-shop {
+		position: absolute;
+		right: 0;
+		bottom: 0;
 	}
 
 }
 
 .dining-chair-banner {
+	height: 158px;
+	width: 100%;
 	color: white;
+	
+
 	.go-shop {
-		margin-top: 6.5em;
 		color: white;
 	}
 }
 
 .floor-lamp-banner {
+	height: 234px;
+	width: 100%;
 	color: @gray-color;
+
 	.tag {
 		color: #b7b7b7;
 	}
@@ -580,9 +619,8 @@ h4.title {
 }
 
 .stool-banner {
-	position: absolute;
-    top: 30px;
-    left: 20px;
+	height: 220px;
+	width: 100%;
 	color: @gray-color;
 
 	.banner-title {
@@ -611,6 +649,12 @@ h4.title {
 
 	.col-4 {
 		position: relative;
+		height: 160px;
+
+		img {
+			height: 100%;
+			object-fit: cover;
+		}
 	}
 
 	.discount-label {
@@ -620,15 +664,16 @@ h4.title {
 
 	.product-name {
 		font-size: .92rem;
-		line-height: 3;
+		line-height: 2;
 	}
 	
 	.product-text {
 		position: absolute;
-	    top: 30px;
-	    left: 25px;
+		top: 10%;
+	    right: 5%;
+	    left: 5%;
+	    bottom: 10%;
 	    color: @gray-text;
-	    line-height: 0;
 	    letter-spacing: .1rem;
 
 	    a {
@@ -655,7 +700,8 @@ h4.title {
 	}	
 	
 	.go-shop {
-	    	margin-top: 4em;
+	    	position: absolute;
+	    	bottom: 0;
 	    	font-weight: normal;
 	 }
 
@@ -783,12 +829,13 @@ h4.title {
 	padding-bottom: 4em;
 
 	.row {
-		margin: 0 -2em;
+		margin: 0 -10px;
+		text-align: center;
 	}
 
 	.subtitle {
 		padding-left: .5em;
-		font-size: .5rem;
+		font-size: 14px;
 	    letter-spacing: 3px;    
 		color: @gray-text;
 	}
@@ -798,7 +845,9 @@ h4.title {
 	}
 
 	.brand-logo {
-		padding: .5em 2em;
+		float: none;
+		display: inline-block;
+		padding: .5em 10px;
 	}
 }
 
@@ -919,6 +968,7 @@ hr {
 
 	.container {
 		max-width: 720px;
+		padding: 0;
 	}
 
 
@@ -945,6 +995,15 @@ hr {
 		}
 	}
 
+
+	.col-5 {
+		width: 38%;
+	}
+
+	.col-7 {
+		width: 62%;
+	}
+
 // header
 	.account, #nav {
 		width: 720px;
@@ -953,7 +1012,7 @@ hr {
 	#breadcrumbs {
 		display: flex;
 		justify-content: center;
-		font-size: .5rem;
+		font-size: 14px;
 		line-height: 3;
 		color: @gray-text;
 
@@ -967,7 +1026,7 @@ hr {
 // content
 
 	p {
-		font-size: .2rem;
+		font-size: 14px;
 	}
 
 	.banners {
@@ -975,19 +1034,19 @@ hr {
 	}
 
 	.tag {
-		font-size: .5rem;
+		font-size: 13px;
 	}
 
 	.discount {
-		font-size: .5rem;
+		font-size: 14px;
 	}
 
 	.go-shop {
-		font-size: .5rem;
+		font-size: 13px;
 	}
 
 	.stars {
-			font-size: .5rem;
+			font-size: 13px;
 	}
 
 	
@@ -1000,31 +1059,9 @@ hr {
 		}
 
 		.col-3 {
-
-			&:nth-child(2) {
-				width: 24%;
-			}
-			
-
-			&:nth-child(3) {
-				width: 26%;
-			}
+			width: 25%;
 		}
 
-		.col-5 {
-			width: 35.6%;
-
-			.banners {
-				&:nth-child(2) {
-					margin-top: .65em;
-				}
-			}
-		
-		}
-
-	.col-7 {
-		width: 64.3%
-		}
 
 	.full-padding {
 		padding-top: .5em;
@@ -1036,35 +1073,29 @@ hr {
 		}	
 	}
 
-	.collection-benner {
-		top: 145px;
+	.collection-banner {
 		
-		.banner-title {
-			font-size: 1.35rem;
-		}
-		.tag {
-			padding: .2em .5em;
-		}
+		height: 340px;
+		
 	}
 
 	.sofa-banner {
-		left: 10px;
+		height: 340px;
 
-		.price-label {
-			margin-top: 6em;
-    		margin-left: 4em;
-			width: 5.5em;
-			height: 5.5em;
+	}
+
+	.sofa-text {
+
+		.tag {
+			font-size: 12px;
 		}
 
-		.go-shop {
-			margin-top: 3em;
+		.banner-title {
+			font-size: 18px;
 		}
 	}
 
 	.bean-banner, .blue-chair-banner {
-		left: 13px;
-		right: 13px;
 
 		.banner-title {
 			font-size: .9rem;
@@ -1073,18 +1104,22 @@ hr {
 		
 	}
 
-	.col-3 {
-		.banners {
-			margin: 0;
-		}
+	.bean-banner {
+		height: 166px;
 	}
 
+	.blue-chair-banner {
+		height: 162px;
+		margin-top: 11px;
+	}
+
+	
 
 
 
 	.stool-banner {
-		top: 35px;
-   	 	left: 30px;
+		height: 349px;
+		
 
    	 	.banner-title {
    	 		font-size: 1.35rem;
@@ -1099,39 +1134,35 @@ hr {
 	}
 	
 	.dining-chair-banner {
+		height: 136px;
 
-		.go-shop {
-			margin-top: 4em;
-		}
 	}
 
 	.floor-lamp-banner {
+		height: 203px;
+		margin-top: 10px;
 
-		.go-shop {
-			margin-top: 9em;
-		}
 	}
 
 	.features {
 
 		.feature:nth-child(2) {
-		margin: 0 -5em;
+		margin: 0 -20px;
 		}
 
-		.product-text {
-			top: 40px;
-			left: 30px;
-
-		}
 
 	}
 
 
 	.feature {
+
+		.col-4 {
+			height: 210px;
+		}
 		
 
 		.feature-item {
-			padding: 0 5em;
+			padding: 0 20px;
 		}
 
 
@@ -1159,27 +1190,38 @@ hr {
 			margin: 0 -18px;
 		}
 	}
+
+	.brands {
+		.row {
+			text-align: left;
+		}
+
+		.brand-logo {
+			float: left;
+		}
+	}
 	
 
 	// footer
 
 	.guarantee {
-		margin: 0 -2.5em;
+		margin: 0 10px;
 	}
 
 	.pros {
-		padding: 0 2.5em;
+		padding: 0 10px;
 	}
 
 	.info {
 		padding-bottom: 3em;
+		text-align: center;
 
 		.col-3 {
 			width: 100%;
 		}
 
 		.address, a, i {
-			font-size: .5rem;
+			font-size: 14px;
 		}
 
 		
@@ -1191,12 +1233,17 @@ hr {
 		display: inline-block;
 		float: left;
 		width: 50%;
-		font-size: .5rem;
+		font-size: 14px;
 	}
 
 
 	.social-media  {
 		padding-bottom: 0;
+
+		ul {
+			display: inline-block;
+		}
+
 		i {
 			font-size: 1rem;
 		}
@@ -1206,7 +1253,7 @@ hr {
 
 	.copyright {
 		float: left;
-		font-size: .5rem;
+		font-size: 14px;
 	}
 
 	.payment-methods {
@@ -1302,7 +1349,7 @@ hr {
 					display: inline-block;
 					padding: 10px 20px;
 					color: @light-gray-color;
-					font-size: .5rem;
+					font-size: 14px;
 					transition: background-color .5s;
 				 &:hover {
 				 	background-color: #3f3e43;
@@ -1395,7 +1442,7 @@ hr {
 		.cart-content {
 			float: right;
 			display: inline;
-		    font-size: 0.5rem;
+		    font-size: 14px;
 		    line-height: 15px;
 
 		    div {
@@ -1410,8 +1457,8 @@ hr {
 
 	.tag {
 		line-height: 2;
-		font-size: .85rem;
 		font-weight: 500;
+		font-size: 15px;
 		letter-spacing: 3px;
 	}
 
@@ -1471,11 +1518,6 @@ hr {
 			padding: 0 .35em;
 		}
 
-		.col-5 {
-			.banners:nth-child(2) {
-				margin-top: .9em;
-			}
-		}
 
 		.price {
 			font-size: 1.8rem;
@@ -1487,9 +1529,8 @@ hr {
 	}
 
 
-	.collection-benner {		
-		top: 250px;
-		left: 60px;
+	.collection-banner {		
+		height: 563px;	
 		
 
 		.banner-title {
@@ -1501,30 +1542,34 @@ hr {
 	}
 
 	.sofa-banner {
-		top: 30px;
-		left: 30px;
+		height: 563px;
+
+		.tag {
+			font-size: 14px;
+			text-align: left;
+		}
 		
 		.banner-title {
-			font-size: 1.5rem;
+			font-size: 28px;
 		}
 
 		.price-label {
-			margin-top: 8.5em;
-    		margin-left: 6.5rem;
 			padding-top: 37px;
 			width: 6.5em;
 			height: 6.5em;
 		}
 
-		.go-shop {
-			margin-top: 6em;
+	}
+
+	.sofa-text {
+		.price-label {
+			.price span {
+				font-size: 22px;
+			}
 		}
 	}
 
 	.bean-banner, .blue-chair-banner {
-		top: 35px;
-	    left: 30px;
-	    right: 30px;
 
 		.banner-title {
 			font-size: 1.15rem;
@@ -1535,11 +1580,8 @@ hr {
 	}
 
 	.bean-banner {
+		height: 275px;
 
-		.price {
-			margin-top: 3em;
-    		margin-bottom: 0.5em;
-		}
 
 		.go-shop {
 			padding: 0.5em 0.8em;
@@ -1548,19 +1590,15 @@ hr {
 	}
 
 	.blue-chair-banner {
+		height: 269px;
+		margin-top: 18px;
 
-		.stars {
-			margin-top: 4.2rem;
-		}
-
-		.detail-btn {
-			margin-left: 1rem;
+		.discount {
+			font-size: 18px;
 		}
 	}
 	
 	.dining-chair-banner, .floor-lamp-banner {
-		top: 35px;
-   	 	right: 40px;
 
 		.banner-title {
 			font-size: 1.5rem;
@@ -1573,23 +1611,20 @@ hr {
 	}
 
 	.dining-chair-banner {
-		.go-shop {
-			margin-top: 5em;
-		}
+		height: 223px;
+		
 	}
 
 	.floor-lamp-banner {
-		.go-shop {
-			margin-top: 12em;
-		}
+		height: 334px;
+		margin-top: 22px;
 	}
 
 	.stool-banner {
-		top: 72px;
-    	left: 56px;
+		height: 579px;
 
 		.banner-title {
-			font-size: 2.5rem;
+			font-size: 35px;
 		}
 	}
 
@@ -1619,14 +1654,9 @@ hr {
 			}
 		}
 
-		.product-text {
-			top: 30px;
-			left: 40px;
-		}
+		
 
-		.go-shop {
-			margin-top: 4em;
-		}
+		
 
 	}
 
@@ -1686,6 +1716,8 @@ hr {
 
 	.brands {
 
+
+
 		.control-bar {
 			display: block;
 			position: absolute;
@@ -1707,13 +1739,21 @@ hr {
 		}
 	}
 
+	.brand-logo {
+		
+
+		&:hover {
+			border: 1px solid #eee;
+		}
+	}
+
 
 // footer
 
 	#footer {
 
 		.row {
-			margin: 0 -2em;
+			margin: 0 -10px;
 		}
 	}
 
@@ -1753,7 +1793,8 @@ hr {
 	}
 
 	.info-box {
-		padding: 0 2em;
+		padding: 0 10px;
+		text-align: left;
 
 		&:last-child {
 			text-align: right;
@@ -1782,13 +1823,12 @@ hr {
 	}
 
 	.search-bar {
-
+		display: flex;
 		padding-top: 1em;
-		left: -86px;
+		
 
 		.button {
-			position: absolute;
-			left: 164px;		
+
 			padding: 1.2em;
 			transition: background-color .3s;
 	
