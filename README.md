@@ -1,4 +1,10 @@
-# 傢俱網站原始版
+# Furniture Store(原始版)
+
+未使用任何框架及套件刻畫出RWD網站。
+
+### 主要技術
+HTML/CSS(LESS)
+Javascript(jQuery)
 
 **主要頁面**
 
