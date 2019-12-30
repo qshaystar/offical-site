@@ -3,8 +3,8 @@
 未使用任何框架及套件刻畫出RWD網站。
 
 ### 主要技術
-HTML/CSS(LESS)
-Javascript(jQuery)
+* HTML/CSS(LESS)
+* Javascript(jQuery)
 
 **主要頁面**
 
